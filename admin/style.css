@@ -1,0 +1,156 @@
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------
+                                                    IMPORT FONTS
+--------------------------------------------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+
+
+/*------------------------------   CSS RESET   ------------------------------*/
+
+
+body{
+    margin: 0px;
+    padding: 40px 0px 0px;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif !important;
+}
+
+*, ::before, ::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------
+                                                        HEADER PART
+--------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    z-index: 100;
+    padding: 0px 10px;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 3px 10px -5px rgb(0 0 0 / 88%);
+}
+
+#header .toggle{
+    height: 34px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: 0.4s;
+}
+#header .toggle:hover{
+    /* background: #4b4b4b; */
+    animation: navop 0.4s;
+}
+
+#header .nav-toggler{
+    position: relative;
+    height: 2px;
+    width: 27px;
+    background: white;
+    transition: 0.3s;
+}
+#header .nav-toggler::before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    height: 2px;
+    width: 65%;
+    background: white;
+    transition: 0.3s;
+}
+#header .nav-toggler::after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    height: 2px;
+    width: 35%;
+    background: white;
+    transition: 0.3s;
+}
+
+#header .toggler-open .nav-toggler{
+    transform: rotate(-45deg);
+    /* width: 60%; */
+}
+
+#header .toggler-open .nav-toggler::before{
+    /* width: 100%; */
+    width: 65%;
+    transform: rotate(90deg);
+    top: -5px;
+    left: 5px;
+}
+
+#header .toggler-open .nav-toggler::after{
+    /* width: 90%; */
+    width: 35%;
+    transform: rotate(-90deg);
+    top: 9px;
+    right: 9px;
+}
+
+#header .title{
+    color: white;
+    font-size: 30px;
+    background: transparent;
+}
+
+#header .id{
+    color: white;
+}
+
+
+
+
+
+/*------------------------------   NAVBAR   ------------------------------*/
+
+
+
+
+nav{
+    background: #5c6bc0;
+    width: fit-content;
+    padding: 10px;
+    height: 100%;
+    position: fixed;
+    left: -7%;
+    transition: 0.5s;
+}
+
+.navbar-open{
+    left: 0;
+}

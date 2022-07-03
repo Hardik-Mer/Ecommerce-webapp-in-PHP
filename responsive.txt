@@ -1,0 +1,15 @@
+	HOME
+
+navbar    - 1290
+crezzz	  - 1200
+quat-1 	  - 700
+quality   - 1200
+quat-2 	  - 790
+satis	  - 1330
+
+footer	  - 1070
+
+
+	PRODUCTS
+
+add-buy	  - 1300
